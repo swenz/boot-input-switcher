@@ -1,0 +1,15 @@
+# Package entry for a pull request against https://github.com/webosbrew/apps-repo
+# (copy to packages/io.github.swenz.bootinputswitcher.yml there)
+title: Boot Input Switcher
+iconUri: https://github.com/swenz/boot-input-switcher/raw/main/icon.png
+manifestUrl: https://github.com/swenz/boot-input-switcher/releases/latest/download/io.github.swenz.bootinputswitcher.manifest.json
+category: utilities
+description: |
+  Automatically switches the TV to a fixed source every time it turns on:
+  HDMI 1–4, AV, Live TV or any installed app.
+
+  * Works after a cold boot and after waking from standby (Quick Start+)
+  * Optional extra delay
+  * No background service of its own – a small init.d hook plus shell script
+
+  Requires a rooted TV with Homebrew Channel.

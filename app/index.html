@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Boot Input Switcher</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="main">
+    <h1>Boot Input Switcher</h1>
+    <p id="subtitle"></p>
+
+    <div id="warning" class="hidden"></div>
+
+    <div class="row">
+      <div class="label" id="lbl-source"></div>
+      <div class="control focusable" id="source" tabindex="0"><span id="source-value">…</span><span class="chev">▾</span></div>
+    </div>
+
+    <div class="row">
+      <div class="label" id="lbl-delay"></div>
+      <div class="control focusable" id="delay" tabindex="0"><span class="arrow">◀</span><span id="delay-value">0 s</span><span class="arrow">▶</span></div>
+    </div>
+
+    <div class="row">
+      <div class="label" id="lbl-wake"></div>
+      <div class="control focusable" id="wake" tabindex="0"><span id="wake-value"></span></div>
+    </div>
+
+    <div class="buttons">
+      <div class="button focusable" id="save" tabindex="0"></div>
+      <div class="button focusable" id="test" tabindex="0"></div>
+    </div>
+
+    <div id="status"></div>
+    <pre id="log"></pre>
+  </div>
+
+  <div id="overlay" class="hidden">
+    <div id="list"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

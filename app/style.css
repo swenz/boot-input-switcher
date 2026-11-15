@@ -1,0 +1,162 @@
+html, body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background: #10141f;
+  color: #e8ecf4;
+  font-family: "LG Smart UI", "Museo Sans", Arial, sans-serif;
+  font-size: 30px;
+  overflow: hidden;
+}
+
+#main {
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 70px;
+}
+
+h1 {
+  font-size: 56px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+}
+
+#subtitle {
+  margin: 0 0 40px 0;
+  color: #9aa6bd;
+}
+
+#warning {
+  background: #5a2a1c;
+  border-left: 8px solid #ff8a5c;
+  padding: 18px 24px;
+  margin-bottom: 30px;
+  font-size: 26px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.label {
+  width: 440px;
+  color: #c3cbdc;
+}
+
+.control {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  height: 84px;
+  padding: 0 28px;
+  background: #1f2a44;
+  border: 4px solid transparent;
+  border-radius: 12px;
+}
+
+.control .arrow, .control .chev {
+  color: #7f8cab;
+}
+
+.buttons {
+  display: flex;
+  margin-top: 40px;
+}
+
+.button {
+  box-sizing: border-box;
+  height: 84px;
+  line-height: 76px;
+  padding: 0 44px;
+  margin-right: 24px;
+  background: #2b3960;
+  border: 4px solid transparent;
+  border-radius: 12px;
+}
+
+.focusable:focus {
+  outline: none;
+  border-color: #ffffff;
+  background: #3d5390;
+}
+
+#status {
+  margin-top: 36px;
+  font-size: 26px;
+  color: #9aa6bd;
+  min-height: 34px;
+}
+
+#status.ok { color: #7fe0a0; }
+#status.err { color: #ff8a5c; }
+
+#log {
+  margin-top: 14px;
+  font-size: 20px;
+  line-height: 28px;
+  color: #6f7b96;
+  white-space: pre-wrap;
+  font-family: monospace;
+}
+
+#overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(5, 8, 14, 0.8);
+}
+
+#list {
+  position: absolute;
+  left: 50%;
+  top: 90px;
+  width: 900px;
+  margin-left: -450px;
+  max-height: 900px;
+  overflow-y: auto;
+  background: #1a2238;
+  border-radius: 16px;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.group {
+  padding: 18px 22px 8px 22px;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #7f8cab;
+}
+
+.item {
+  box-sizing: border-box;
+  height: 72px;
+  line-height: 64px;
+  padding: 0 22px;
+  border: 4px solid transparent;
+  border-radius: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.item.selected::after {
+  content: " ✓";
+  color: #7fe0a0;
+}
+
+.item small {
+  color: #7f8cab;
+  font-size: 22px;
+  margin-left: 14px;
+}
+
+.hidden {
+  display: none;
+}

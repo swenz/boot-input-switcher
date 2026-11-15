@@ -1,0 +1,15 @@
+{
+  "id": "io.github.swenz.bootinputswitcher",
+  "version": "1.0.0",
+  "vendor": "swenz",
+  "type": "web",
+  "main": "index.html",
+  "title": "Boot Input Switcher",
+  "appDescription": "Switch to a fixed input or app every time the TV turns on",
+  "icon": "icon.png",
+  "largeIcon": "largeIcon.png",
+  "iconColor": "#1f2a44",
+  "bgColor": "#10141f",
+  "resolution": "1920x1080",
+  "disableBackHistoryAPI": true
+}
