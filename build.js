@@ -24,7 +24,7 @@ const manifest = {
   type: appinfo.type,
   title: appinfo.title,
   appDescription: appinfo.appDescription,
-  iconUri: `${REPO}/raw/main/icon.png`,
+  iconUri: 'https://raw.githubusercontent.com/swenz/boot-input-switcher/main/app/largeIcon.png',
   sourceUrl: REPO,
   rootRequired: true,
   ipkUrl: ipkName,

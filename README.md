@@ -4,8 +4,9 @@ webOS homebrew app that switches an LG TV to a fixed source every time it turns 
 HDMI 1–4, AV, Live TV or any installed app.
 
 Requires a **rooted TV with [Homebrew Channel](https://github.com/webosbrew/webos-homebrew-channel)**.
-Developed against webOS 6.5.3 (ARMv7); it only uses shell and Luna calls, so other
-rooted webOS versions should work as well.
+Developed and tested on webOS 6.5.3 (ARMv7): cold boot and wake from standby both switch the
+source. It only uses shell and Luna calls, so other rooted webOS versions should work as well
+(on webOS 11+ Homebrew Channel 0.8.0 or later is needed for root access from apps).
 
 ## How it works
 
@@ -41,8 +42,7 @@ Manifest URL:
 https://github.com/swenz/boot-input-switcher/releases/latest/download/io.github.swenz.bootinputswitcher.manifest.json
 ```
 
-- **Homebrew Channel:** install from the manifest URL above.
-- **From a root shell on the TV** (same mechanism):
+- **From a root shell on the TV**, through the Homebrew Channel service:
 
   ```sh
   luna-send -i luna://org.webosbrew.hbchannel.service/install \
@@ -52,6 +52,10 @@ https://github.com/swenz/boot-input-switcher/releases/latest/download/io.github.
 - **From a PC:** download the `.ipk` from the [releases](https://github.com/swenz/boot-input-switcher/releases)
   and install it with [webOS Dev Manager](https://github.com/webosbrew/dev-manager-desktop) or
   `ares-install`.
+
+If another homebrew tool also launches an app at boot (for example a custom launcher), the two
+compete; Boot Input Switcher retries up to three times and usually wins, but only one of them
+should be in charge.
 
 Then open **Boot Input Switcher** on the TV, choose a source and press **Save**.
 **Test now** switches immediately.

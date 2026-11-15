@@ -1,9 +1,13 @@
 # Package entry for a pull request against https://github.com/webosbrew/apps-repo
 # (copy to packages/io.github.swenz.bootinputswitcher.yml there)
 title: Boot Input Switcher
-iconUri: https://github.com/swenz/boot-input-switcher/raw/main/icon.png
+iconUri: https://raw.githubusercontent.com/swenz/boot-input-switcher/main/app/largeIcon.png
 manifestUrl: https://github.com/swenz/boot-input-switcher/releases/latest/download/io.github.swenz.bootinputswitcher.manifest.json
-category: utilities
+category: system
+pool: main
+requirements:
+  webosRelease: '>=6.5.3'
+shortDescription: Switch to a fixed input or app every time the TV turns on.
 description: |
   Automatically switches the TV to a fixed source every time it turns on:
   HDMI 1–4, AV, Live TV or any installed app.
@@ -12,4 +16,13 @@ description: |
   * Optional extra delay
   * No background service of its own – a small init.d hook plus shell script
 
-  Requires a rooted TV with Homebrew Channel.
+  ## Requirements
+
+  The TV must be rooted, with [Homebrew Channel](https://github.com/webosbrew/webos-homebrew-channel)
+  installed and running with root access. Tested on webOS 6.5.3.
+
+  ## How to use
+
+  Open the app, choose a source and press Save. To turn it off again, choose
+  "Disabled" and press Save; this removes the boot hook. A hook left behind by
+  uninstalling the app does nothing.
